@@ -174,9 +174,7 @@ w = Sudoku([
     [0,0,0,0,0,9,7,0,0]
 ])#the most difficult sudoku """
 t1 = time.time()
-# t1 = time.perf_counter()
 #w.fill()
 w.fill_all()
 t2 = time.time()
-# t2 = time.perf_counter()
 print("Spend %f s" % (t2 - t1))
