@@ -24,12 +24,12 @@ class Cell:
 
 class Sudoku:
     def __init__(self, array):
-        self.i = 0 #循环次数
-        self.num = 0 #解的个数
+        self.i = 0 # number of loops
+        self.num = 0 # number of solutions
         self.solvable = False
         self.result = array
-        self.process = [] #作为一个栈
-        self.array = [[] for _ in range(9)] #记录每点可选的值
+        self.process = [] # as a stack
+        self.array = [[] for _ in range(9)] # record the optional values for each point
         for x in range(9):
             for y in range(9):
                 if self.result[x][y] != 0:
@@ -173,10 +173,10 @@ w = Sudoku([
     [0,0,4,0,0,0,0,3,0],
     [0,0,0,0,0,9,7,0,0]
 ])#the most difficult sudoku """
-#t1 = time.process_time()
-t1 = time.perf_counter()
+t1 = time.time()
+# t1 = time.perf_counter()
 #w.fill()
 w.fill_all()
-#t2 = time.process_time()
-t2 = time.perf_counter()
+t2 = time.time()
+# t2 = time.perf_counter()
 print("Spend %f s" % (t2 - t1))
